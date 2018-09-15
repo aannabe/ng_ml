@@ -19,7 +19,12 @@ for iter = 1:num_iters
 
 
 
-
+    h= X*theta;
+    res = h-y;
+    
+    for i = 1:size(X, 2)
+    theta(i) = theta(i) - (alpha/m)*sum(res.*X(:,i));
+    end
 
 
 
