@@ -25,6 +25,7 @@ J = J + lambda/(2*m)*(sum(theta.^2)-theta(1).^2);
 res=h-y;
 
 grad = (1/m)*(res'*X) +(lambda/m)*theta';
+
 grad(1) = (1/m)*(res'*X(:,1));
 
 
